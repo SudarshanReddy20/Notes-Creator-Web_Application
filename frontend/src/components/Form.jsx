@@ -17,6 +17,8 @@ function Form({ route, method }) {
         setLoading(true);
         e.preventDefault();
 
+        console.log("Register URL:", api.defaults.baseURL + route);
+
         try {
             const res = await api.post(route, { username, password })
             if (method === "login") {
@@ -54,6 +56,7 @@ function Form({ route, method }) {
             <button className="form-button" type="submit">
                 {name}
             </button>
+            
         </form>
     );
 }
