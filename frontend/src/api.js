@@ -1,10 +1,10 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
-const apiUrl = "https://project-backend-y46x.onrender.com";
+// const apiUrl = "https://project-backend-y46x.onrender.com";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl,
+  baseURL: "https://project-backend-y46x.onrender.com",,
 });
 
 api.interceptors.request.use(
