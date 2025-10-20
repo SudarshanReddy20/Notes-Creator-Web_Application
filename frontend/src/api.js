@@ -4,7 +4,7 @@ import { ACCESS_TOKEN } from "./constants";
 // const apiUrl = "https://project-backend-y46x.onrender.com";
 
 const api = axios.create({
-  baseURL: "https://project-backend-y46x.onrender.com",,
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 api.interceptors.request.use(
