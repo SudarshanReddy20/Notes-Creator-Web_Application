@@ -1,56 +1,107 @@
-# Notes Creator
+# Notes-Creator
 
-**Short:** Full-stack notes management app with JWT auth, Django (DRF) backend and React frontend.
+**Full-stack notes app — Django (DRF) backend + React frontend.**  
+Lightweight, secure CRUD with JWT auth, Docker support, and simple deployment instructions.
 
-## Demo
-![screenshot](docs/screenshot-notes.gif)  // replace with actual image
+---
 
 ## Tech stack
 - Backend: Python, Django, Django REST Framework
-- Frontend: React.js, Tailwind CSS
-- Auth: JWT
-- DB: PostgreSQL / MySQL
-- Dev: Docker, Git, GitHub Actions
+- Frontend: React, Vite, Tailwind CSS
+- Auth: JWT (djangorestframework-simplejwt)
+- DB: PostgreSQL (development: SQLite supported)
+- Dev: Docker, GitHub Actions
+
+---
 
 ## Features
-- User signup / login (JWT)
+- Email/password signup and JWT login
 - Create / Read / Update / Delete notes
-- Protected routes and role-ready structure
+- Private user notebooks (notes scoped to user)
+- Search and basic tagging
+- Example dataset for quick demo
 
-## Run locally (quick)
+---
+
+## Repo layout
+/backend # Django project (API)
+├─ app/ # core apps (notes, users)
+├─ requirements.txt
+/frontend # React app (Vite)
+├─ src/
+├─ package.json
+/docs # screenshots, demo GIFs
+/docker-compose.yml
+
+yaml
+Copy code
+
+---
+
+## Quickstart — local (Linux / macOS)
+**Backend**
 ```bash
-# Backend
 cd backend
 python -m venv venv
-source venv/bin/activate      # or venv\Scripts\activate on Windows
+source venv/bin/activate
 pip install -r requirements.txt
+cp .env.example .env           # edit DB and SECRET settings as needed
 python manage.py migrate
+python manage.py createsuperuser  # optional
 python manage.py runserver
+Frontend
 
-# Frontend
+bash
+Copy code
 cd frontend
 npm install
 npm run dev
+# open http://localhost:5173
+Windows note: use venv\Scripts\activate to activate the virtualenv.
 
-
-## Docker
+Quickstart — Docker
+bash
+Copy code
 docker-compose up --build
+# Backend: http://localhost:8000
+# Frontend: http://localhost:3000
+Environment variables (.env example)
+ini
+Copy code
+DJANGO_SECRET_KEY=your_secret_key
+DATABASE_URL=postgres://user:pass@db:5432/notes_db
+DEBUG=True
+FRONTEND_URL=http://localhost:3000
+API endpoints (examples)
+POST /api/auth/register/ — register
 
-## Sample data
+POST /api/auth/token/ — get JWT
 
-Use fixtures/sample_notes.json to load demo data:
+GET /api/notes/ — list user notes
 
-python manage.py loaddata fixtures/sample_notes.json
+POST /api/notes/ — create note
 
-## Repo layout
-/backend   # Django + DRF
-/frontend  # React app
-/docs     # screenshots, gifs, demo links
+(Full API docs: /docs or Swagger UI if enabled.)
 
-## License
+Tests
+bash
+Copy code
+cd backend
+pytest -q
+Screenshots / Demo
+Place screenshots or a 10–20s demo GIF in /docs and reference them here:
+![app-demo](/docs/demo-notes.gif)
 
-MIT — see LICENSE.
+Contributing
+Fork → branch feature/<name> → PR.
 
-## Contact
+Follow PEP8; run black ..
 
-sudarshan382003@gmail.com
+Add tests for new features.
+
+License
+MIT — see LICENSE file.
+
+Contact
+Sudarshan Reddy — sudarshan382003@gmail.com
+Resume: /mnt/data/Sudarshan_Reddy_Medapati_Resume.pdf
