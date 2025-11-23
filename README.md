@@ -31,3 +31,26 @@ python manage.py runserver
 cd frontend
 npm install
 npm run dev
+
+
+Docker
+docker-compose up --build
+
+Sample data
+
+Use fixtures/sample_notes.json to load demo data:
+
+python manage.py loaddata fixtures/sample_notes.json
+
+Repo layout
+/backend   # Django + DRF
+/frontend  # React app
+/docs     # screenshots, gifs, demo links
+
+License
+
+MIT — see LICENSE.
+
+Contact
+
+sudarshan382003@gmail.com
