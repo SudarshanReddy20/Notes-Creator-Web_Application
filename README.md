@@ -33,24 +33,24 @@ npm install
 npm run dev
 
 
-# Docker
+## Docker
 docker-compose up --build
 
-# Sample data
+## Sample data
 
 Use fixtures/sample_notes.json to load demo data:
 
 python manage.py loaddata fixtures/sample_notes.json
 
-# Repo layout
+## Repo layout
 /backend   # Django + DRF
 /frontend  # React app
 /docs     # screenshots, gifs, demo links
 
-# License
+## License
 
 MIT — see LICENSE.
 
-# Contact
+## Contact
 
 sudarshan382003@gmail.com
