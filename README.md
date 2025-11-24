@@ -39,57 +39,62 @@ Copy code
 ---
 
 ## Quickstart — local (Linux / macOS)
-**Backend**
+### Backend
 ```bash
 cd backend
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env           # edit DB and SECRET settings as needed
+cp .env.example .env
 python manage.py migrate
-python manage.py createsuperuser  # optional
+python manage.py createsuperuser
 python manage.py runserver
+```
 
-**Frontend**
-Copy code
+### Frontend
+```bash
 cd frontend
 npm install
 npm run dev
 # open http://localhost:5173
-Windows note: use venv\Scripts\activate to activate the virtualenv.
+```
+
+Windows note: use `venv\Scripts\activate` to activate the virtualenv.
 
 ---
 
-**## Quickstart — Docker**
+## Quickstart — Docker
 ```bash
-Copy code
 docker-compose up --build
 # Backend: http://localhost:8000
 # Frontend: http://localhost:3000
+```
 
-**## Environment variables (.env example)**
-```bash
-Copy code
+---
+
+## Environment variables (.env example)
+```ini
 DJANGO_SECRET_KEY=your_secret_key
 DATABASE_URL=postgres://user:pass@db:5432/notes_db
 DEBUG=True
 FRONTEND_URL=http://localhost:3000
-API endpoints (examples)
-POST /api/auth/register/ — register
+```
 
-POST /api/auth/token/ — get JWT
+---
 
-GET /api/notes/ — list user notes
+## API endpoints (examples)
+- POST `/api/auth/register/`
+- POST `/api/auth/token/`
+- GET `/api/notes/`
+- POST `/api/notes/`
 
-POST /api/notes/ — create note
+---
 
-(Full API docs: /docs or Swagger UI if enabled.)
-
-**## Tests**
+## Tests
 ```bash
-Copy code
 cd backend
 pytest -q
+```
 
 **## Screenshots / Demo**
 1. Registration Endpoint (Method Not Allowed)
