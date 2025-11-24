@@ -49,9 +49,9 @@ cp .env.example .env           # edit DB and SECRET settings as needed
 python manage.py migrate
 python manage.py createsuperuser  # optional
 python manage.py runserver
-Frontend
 
-bash
+**Frontend**
+```bash
 Copy code
 cd frontend
 npm install
@@ -59,14 +59,15 @@ npm run dev
 # open http://localhost:5173
 Windows note: use venv\Scripts\activate to activate the virtualenv.
 
-Quickstart — Docker
-bash
+**## Quickstart — Docker**
+```bash
 Copy code
 docker-compose up --build
 # Backend: http://localhost:8000
 # Frontend: http://localhost:3000
-Environment variables (.env example)
-ini
+
+**## Environment variables (.env example)**
+```bash
 Copy code
 DJANGO_SECRET_KEY=your_secret_key
 DATABASE_URL=postgres://user:pass@db:5432/notes_db
@@ -83,13 +84,13 @@ POST /api/notes/ — create note
 
 (Full API docs: /docs or Swagger UI if enabled.)
 
-Tests
-bash
+**## Tests**
+```bash
 Copy code
 cd backend
 pytest -q
 
-##Screenshots / Demo
+**## Screenshots / Demo**
 1. Registration Endpoint (Method Not Allowed)
 
 Shows the /api/user/register/ endpoint rejecting a GET request with 405 Method Not Allowed. Confirms the API only accepts POST for secure user creation.
@@ -126,16 +127,16 @@ Displays the “Note created!” alert after a POST request. Confirms frontend-t
 
 Shows all saved notes with title, content, date, and delete controls. Demonstrates full CRUD working: create, fetch, and delete.
 
-Contributing
+**## Contributing**
 Fork → branch feature/<name> → PR.
 
 Follow PEP8; run black ..
 
 Add tests for new features.
 
-License
+**## License**
 MIT — see LICENSE file.
 
-Contact
+**## Contact**
 Sudarshan Reddy — sudarshan382003@gmail.com
 Resume: /mnt/data/Sudarshan_Reddy_Medapati_Resume.pdf
