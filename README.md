@@ -51,13 +51,14 @@ python manage.py createsuperuser  # optional
 python manage.py runserver
 
 **Frontend**
-```bash
 Copy code
 cd frontend
 npm install
 npm run dev
 # open http://localhost:5173
 Windows note: use venv\Scripts\activate to activate the virtualenv.
+
+---
 
 **## Quickstart — Docker**
 ```bash
