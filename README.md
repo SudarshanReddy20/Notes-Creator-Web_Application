@@ -24,17 +24,16 @@ Lightweight, secure CRUD with JWT auth, Docker support, and simple deployment in
 ---
 
 ## Repo layout
-/backend # Django project (API)
-├─ app/ # core apps (notes, users)
-├─ requirements.txt
-/frontend # React app (Vite)
-├─ src/
-├─ package.json
-/docs # screenshots, demo GIFs
+
+/backend              # Django project (API)
+  ├─ app/             # core apps (notes, users)
+  ├─ requirements.txt
+/frontend             # React app (Vite)
+  ├─ src/
+  ├─ package.json
+/docs                 # screenshots, demo GIFs
 /docker-compose.yml
 
-yaml
-Copy code
 
 ---
 
