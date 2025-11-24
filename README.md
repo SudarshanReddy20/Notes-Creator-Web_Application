@@ -25,6 +25,7 @@ Lightweight, secure CRUD with JWT auth, Docker support, and simple deployment in
 
 ## Repo layout
 
+```
 /backend              # Django project (API)
   ├─ app/             # core apps (notes, users)
   ├─ requirements.txt
@@ -33,6 +34,7 @@ Lightweight, secure CRUD with JWT auth, Docker support, and simple deployment in
   ├─ package.json
 /docs                 # screenshots, demo GIFs
 /docker-compose.yml
+```
 
 
 ---
