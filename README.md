@@ -88,9 +88,43 @@ bash
 Copy code
 cd backend
 pytest -q
-Screenshots / Demo
-Place screenshots or a 10–20s demo GIF in /docs and reference them here:
-![app-demo](/docs/demo-notes.gif)
+
+##Screenshots / Demo
+1. Registration Endpoint (Method Not Allowed)
+
+Shows the /api/user/register/ endpoint rejecting a GET request with 405 Method Not Allowed. Confirms the API only accepts POST for secure user creation.
+
+2. Successful User Registration
+
+A POST request to the registration endpoint returning 201 Created along with the new user’s ID and username. Verifies that the signup workflow is working.
+
+3. JWT Token Generation (Login)
+
+Displays a valid login request to /api/token/, returning access and refresh tokens. Confirms that authentication is functioning end-to-end.
+
+4. JWT Token Refresh
+
+Shows the /api/token/refresh/ endpoint issuing a new access token when provided with a valid refresh token. Demonstrates token lifecycle handling.
+
+5. React Form Component
+
+Snapshot of the React form (Form.jsx) in VS Code. Includes backend console logs proving the frontend is sending correct POST requests to the API.
+
+6. Notes Page — Create Note Form
+
+Frontend view of the note creation UI. Users can enter a title and content before submitting. Validates form rendering and basic UX.
+
+7. Creating a Note (Before Submit)
+
+A filled form ready to be submitted. Useful to show the user workflow and how input is structured before reaching the backend.
+
+8. Successful Note Creation Alert
+
+Displays the “Note created!” alert after a POST request. Confirms frontend-to-backend communication is successful.
+
+9. Notes List (View & Delete)
+
+Shows all saved notes with title, content, date, and delete controls. Demonstrates full CRUD working: create, fetch, and delete.
 
 Contributing
 Fork → branch feature/<name> → PR.
