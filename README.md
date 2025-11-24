@@ -99,68 +99,68 @@ pytest -q
 
 ## Screenshots / Demo
 
-<style>
-figure {
-  margin: 32px 0;     
-  padding: 0;
-}
-figure img {
-  max-width: 100%;
-  border-radius: 6px;
-}
-figure figcaption {
-  margin-top: 6px;
-  font-size: 14px;
-  color: #555;
-}
-</style>
-
-
 <figure>
   <img src="./docs/Screenshot-1.png" alt="Registration Endpoint - Method Not Allowed" />
   <figcaption>Registration endpoint rejecting GET with 405 Method Not Allowed.</figcaption>
 </figure>
+
+<hr style="border:0;height:35px">
 
 <figure>
   <img src="./docs/Screenshot-2.png" alt="Successful User Registration" />
   <figcaption>POST /api/user/register/ returned 201 Created with user details.</figcaption>
 </figure>
 
+<hr style="border:0;height:35px">
+
 <figure>
   <img src="./docs/Screenshot-3.png" alt="JWT Token Generation" />
   <figcaption>Valid login returning access and refresh JWT tokens.</figcaption>
 </figure>
+
+<hr style="border:0;height:35px">
 
 <figure>
   <img src="./docs/Screenshot-4.png" alt="JWT Token Refresh" />
   <figcaption>Refresh token endpoint generating a new access token.</figcaption>
 </figure>
 
+<hr style="border:0;height:35px">
+
 <figure>
   <img src="./docs/Screenshot-5.png" alt="React Form Component" />
   <figcaption>React form component sending POST requests to the backend.</figcaption>
 </figure>
+
+<hr style="border:0;height:35px">
 
 <figure>
   <img src="./docs/Screenshot-6.png" alt="Create Note Form" />
   <figcaption>Frontend note creation form with title and content fields.</figcaption>
 </figure>
 
+<hr style="border:0;height:35px">
+
 <figure>
   <img src="./docs/Screenshot-7.png" alt="Filled Form Before Submit" />
   <figcaption>Filled form demonstrating user interaction before submission.</figcaption>
 </figure>
+
+<hr style="border:0;height:35px">
 
 <figure>
   <img src="./docs/Screenshot-8.png" alt="Note Created Alert" />
   <figcaption>Success alert confirming the note was created.</figcaption>
 </figure>
 
+<hr style="border:0;height:35px">
+
 <figure>
   <img src="./docs/Screenshot-9.png" alt="Notes List View and Delete" />
   <figcaption>Notes list displaying saved notes with delete buttons.</figcaption>
 </figure>
 
+<hr style="border:0;height:35px">
 
 ## Contributing
 Fork → branch feature/<name> → PR.
