@@ -97,53 +97,64 @@ cd backend
 pytest -q
 ```
 
-**## Screenshots / Demo**
-1. Registration Endpoint (Method Not Allowed)
+## Screenshots / Demo
 
-Shows the /api/user/register/ endpoint rejecting a GET request with 405 Method Not Allowed. Confirms the API only accepts POST for secure user creation.
+<figure>
+  <img src="./docs/Screenshot-1.png" alt="Registration Endpoint - Method Not Allowed" />
+  <figcaption>Registration endpoint rejecting GET with 405 Method Not Allowed.</figcaption>
+</figure>
 
-2. Successful User Registration
+<figure>
+  <img src="./docs/Screenshot-2.png" alt="Successful User Registration" />
+  <figcaption>POST /api/user/register/ returned 201 Created with user details.</figcaption>
+</figure>
 
-A POST request to the registration endpoint returning 201 Created along with the new user’s ID and username. Verifies that the signup workflow is working.
+<figure>
+  <img src="./docs/Screenshot-3.png" alt="JWT Token Generation" />
+  <figcaption>Valid login returning access and refresh JWT tokens.</figcaption>
+</figure>
 
-3. JWT Token Generation (Login)
+<figure>
+  <img src="./docs/Screenshot-4.png" alt="JWT Token Refresh" />
+  <figcaption>Refresh token endpoint generating a new access token.</figcaption>
+</figure>
 
-Displays a valid login request to /api/token/, returning access and refresh tokens. Confirms that authentication is functioning end-to-end.
+<figure>
+  <img src="./docs/Screenshot-5.png" alt="React Form Component" />
+  <figcaption>React form component sending POST requests to the backend.</figcaption>
+</figure>
 
-4. JWT Token Refresh
+<figure>
+  <img src="./docs/Screenshot-6.png" alt="Create Note Form" />
+  <figcaption>Frontend note creation form with title and content fields.</figcaption>
+</figure>
 
-Shows the /api/token/refresh/ endpoint issuing a new access token when provided with a valid refresh token. Demonstrates token lifecycle handling.
+<figure>
+  <img src="./docs/Screenshot-7.png" alt="Filled Form Before Submit" />
+  <figcaption>Filled form demonstrating user interaction before submission.</figcaption>
+</figure>
 
-5. React Form Component
+<figure>
+  <img src="./docs/Screenshot-8.png" alt="Note Created Alert" />
+  <figcaption>Success alert confirming the note was created.</figcaption>
+</figure>
 
-Snapshot of the React form (Form.jsx) in VS Code. Includes backend console logs proving the frontend is sending correct POST requests to the API.
+<figure>
+  <img src="./docs/Screenshot-9.png" alt="Notes List View and Delete" />
+  <figcaption>Notes list displaying saved notes with delete buttons.</figcaption>
+</figure>
 
-6. Notes Page — Create Note Form
 
-Frontend view of the note creation UI. Users can enter a title and content before submitting. Validates form rendering and basic UX.
-
-7. Creating a Note (Before Submit)
-
-A filled form ready to be submitted. Useful to show the user workflow and how input is structured before reaching the backend.
-
-8. Successful Note Creation Alert
-
-Displays the “Note created!” alert after a POST request. Confirms frontend-to-backend communication is successful.
-
-9. Notes List (View & Delete)
-
-Shows all saved notes with title, content, date, and delete controls. Demonstrates full CRUD working: create, fetch, and delete.
-
-**## Contributing**
+## Contributing
 Fork → branch feature/<name> → PR.
 
 Follow PEP8; run black ..
 
 Add tests for new features.
 
-**## License**
+## License
 MIT — see LICENSE file.
 
-**## Contact**
+## Contact
 Sudarshan Reddy — sudarshan382003@gmail.com
 Resume: /mnt/data/Sudarshan_Reddy_Medapati_Resume.pdf
