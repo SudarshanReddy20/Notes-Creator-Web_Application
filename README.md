@@ -99,6 +99,23 @@ pytest -q
 
 ## Screenshots / Demo
 
+<style>
+figure {
+  margin: 32px 0;     
+  padding: 0;
+}
+figure img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+figure figcaption {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #555;
+}
+</style>
+
+
 <figure>
   <img src="./docs/Screenshot-1.png" alt="Registration Endpoint - Method Not Allowed" />
   <figcaption>Registration endpoint rejecting GET with 405 Method Not Allowed.</figcaption>
